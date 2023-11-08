@@ -1,0 +1,33 @@
+{% extends '../base.html' %}
+{% block content %}
+{% load static %}
+
+
+<main id="main">
+    <section class="inner-page">
+      <div class="container py-5">
+        <div class="row">
+          {% if serv1 %}
+            {% for l in serv1 %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="card" style="width: 18rem;">
+                <img src="{{ l.part_image.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">{{l.part_name}}</h5>
+                <p class="card-text">{{l.part_disctiption}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          {% else %}
+          <div class="col-md-12">
+            <p>هیچ محصولی وجود ندارد</p>
+          </div>
+        {% endif %}
+
+        </div>
+
+    </section>
+  </main>
+{% endblock %}
