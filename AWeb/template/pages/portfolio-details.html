@@ -24,46 +24,36 @@
       <div class="container">
 
         <div class="row gy-4">
-
+          {% for i in serv1 %}
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" alt="">
+                  <img src="{{ i.part_image.url }}" alt="">
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" alt="">
-                </div>
-
               </div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <div class="col-lg-4">
+
             <div class="portfolio-info">
-              <h3>اطلاعات پروژه</h3>
+              <h3>اطلاعات محصول {{i.part_name}}</h3>
               <ul>
-                <li><strong>دسته بندی</strong>: بکس بادی</li>
-                <li><strong>مشتری</strong>: فولاد مبارکه اصفهان</li>
-                <li><strong>تاریخ پروژه</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>مشتری</strong>: {{i.part_customer}}</li>
+                <li><strong>کاتالوگ محصول</strong>: <a href="#">www.example.com</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>بکس بادی 1 اینچ</h2>
+              <h2>{{i.part_name}}</h2>
               <p>
-                قوی ترین بکس بادی 1 اینچ موجود در کشور با توجه به نسبت وزن به گشتاور
+                {{i.part_disctiption}}
               </p>
             </div>
+          {% endfor %}
           </div>
-
         </div>
 
       </div>

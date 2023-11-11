@@ -10,15 +10,22 @@ def listings(request):
     return render(request, 'pages/listings.html', ser_context)
 
 def listing(request,listing_id):
-    return render(request, 'pages/portfolio-details.html')
-
-def penu_list(request):
-
-    return render(request, 'pages/penu.html')
-
-def hydr_list(request):
     serv = part.objects.all()
     ser_context = {
         "serv1": serv,
     }
-    return render(request, 'pages/heyd.html')
+    return render(request, 'pages/portfolio-details.html', ser_context)
+
+# def penu_list(request,listing_id):
+#     serv = part.objects.all()
+#     ser_context = {
+#         "serv1": serv,
+#     }
+#     return render(request, 'pages/penu.html', ser_context)
+
+# def hydr_list(request, listing_id):
+#     serv = part.objects.all()
+#     ser_context = {
+#         "serv1": serv,
+#     }
+#     return render(request, 'pages/hydro.html',ser_context)

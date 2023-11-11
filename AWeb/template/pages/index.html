@@ -194,29 +194,6 @@
       </div>
     </section>
     <!-- End Counts Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>خدمات</h2>
-          <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fug</p>
-        </div>
-        <div class="row">
-          {% for a in serv1 %}  
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                          <h4 class="title"><a href="">{{ a.serv_name }}</a></h4>
-              <p class="description">{{ a.serv_description }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}  
-      </div>
-    </section>
-    <!-- End Services Section -->
-
     <!-- ======= More Services Section ======= -->
     <section id="more-services" class="more-services">
       <div class="container">
@@ -224,11 +201,11 @@
         <div class="row">
           {% for a in serv1 %}
           <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card" style='background-image: url("{{ a.serv_img }}");' data-aos="fade-up" data-aos-delay="100">
+            <div class="card" style='background-image: url("{{ a.serv_img.url }}");' data-aos="fade-up" data-aos-delay="100">
               <div class="card-body">
                 <h5 class="card-title"><a href="">{{ a.serv_name }}</a></h5>
                 <p class="card-text">{{ serv_description }}</p>
-                <div class="read-more"><a href="{#}"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
+                <div class="read-more"><a href="{% url 'listings' %}"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
               </div>
             </div>
           </div>
@@ -250,10 +227,11 @@
         <div class="row" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter="*" class="filter-active">همه محصولات</li>
               <li data-filter=".filter-app">پنوماتیکی</li>
               <li data-filter=".filter-card">هیدرولیکی</li>
-              <li data-filter=".filter-web">شیر</li>
+              <li data-filter=".filter-web">شیرآلات صنعتی</li>
+              <li data-filter=".filter-unknown">اسمش رو نمیدونیم</li>
             </ul>
           </div>
         </div>
@@ -264,23 +242,10 @@
             <div class="portfolio-wrap">
               <img src="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>محصولات هیدرولیکی</h4>
+                <h4>محصولات پنوماتیکی </h4>
                 <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="{% url 'penu_list' %}" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>محصولات پنوماتیکی</h4>
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="{% url 'hydr_list' %}" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'listings' %}" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -290,10 +255,35 @@
             <div class="portfolio-wrap">
               <img src="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
+                <h4>محصولات هیدرولیکی</h4>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'listings' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-unknown">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>اسمش رو نمیدونیم</h4>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'listings' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
                 <h4>شیرآلات صنعتی </h4>
                 <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="{% url 'valve_list' %}" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'listings' %}" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>

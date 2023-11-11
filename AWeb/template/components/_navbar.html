@@ -4,25 +4,18 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="index.html">آتی اندیشان بصیر</a></h1>
+        <h1><a href="{% url 'index' %}">آتی اندیشان بصیر</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">خانه</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'index' %}">خانه</a></li>
           <li><a class="nav-link scrollto" href="#about">درباره ما</a></li>
           <li><a class="nav-link scrollto" href="#services">خدمات </a></li>
-          <li class="dropdown"><a href="{% url 'listings' %}"><span>محصولات</span>
-            <i class="bi bi-chevron-down"></i></a>
-           <ul>
-             <li><a href="#">پنوماتیکی</a></li>
-             <li><a href="#">هیدرولیکی</a></li>
-           </ul>
-         </li>
-          <!-- <li><a class="nav-link scrollto" href="#team">تیم</a></li> -->
-          <!-- <li><a class="nav-link scrollto" href="#pricing">قیمت</a></li> -->
+          <li><a class="nav-link scrollto" href="{% url 'listings' %}">محصولات </a></li>
+
 
           <li><a class="nav-link scrollto" href="#contact">تماس با ما</a></li>
           <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
