@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'Aweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'aab_website',
+        'NAME':'atiaindishan_web',
         'USER': 'SPQ',
         'PASSWORD':'87534',
         'HOST':'localhost',

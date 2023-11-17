@@ -106,12 +106,18 @@
         <div class="section-title" data-aos="fade-up">
           <h2>درباره ما</h2>
         </div>
+        
         <div class="row content">
               {% for a in about1 %}
             <p align="justify">
               {{ a.about_long_description }}
             </p>
             {% endfor %}
+            <ul>
+              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+            </ul>
             <!-- <a href="#" class="btn-learn-more">بیشتر بخوانید</a> -->
           </div>
         </div>
@@ -124,11 +130,11 @@
       <div class="container">
 
         <div class="row">
-          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
+          <!-- <div class="image col-xl-5 d-flex align-items-stretch  justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
             <img src="{% static 'assets/img/hero-img.png' %}" alt="" class="img-fluid">
-          </div>
+          </div> -->
 
-          <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
+          <div class="col-xl-7 d-flex align-items-stretch  pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
             <div class="content d-flex flex-column justify-content-center">
               <div class="row">
                 {% for a in overview1 %}
@@ -180,17 +186,46 @@
     </section>
     <!-- End Counts Section -->
     <!-- ======= More Services Section ======= -->
-      <!-- <section id="more-services" class="more-services">
+       <section id="more-services" class="more-services">
         <div class="container">
-
+          <div class="section-title" data-aos="fade-up">
+            <h2> خدمات و محصولات ما</h2>
+          </div>
           <div class="row">
             {% for a in serv1 %}
-            <div class="col-md-6 d-flex align-items-stretch">
-              <div class="card" style='background-image: url("{{ a.serv_img.url }}");' data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-6 d-flex align-items-stretch py-5" >
+              <div class="card" style='background-image: url("{{ a.serv_img1.url }}");' data-aos="fade-up" data-aos-delay="100">
                 <div class="card-body">
-                  <h5 class="card-title"><a href="">{{ a.serv_name }}</a></h5>
+                  <h5 class="card-title"><a href="">پنوماتیکی</a></h5>
                   <p class="card-text">{{ serv_description }}</p>
-                  <div class="read-more"><a href="{% url 'listings' %}"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
+                  <div class="read-more"><a href="{% url 'penu_listings' %}"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-stretch  py-5">
+              <div class="card" style='background-image: url("{{ a.serv_img2.url }}");' data-aos="fade-up" data-aos-delay="100">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">هیدرولیکی</a></h5>
+                  <p class="card-text">{{ serv_description }}</p>
+                  <div class="read-more"><a href="{% url 'hydro_listings' %}"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-stretch" >
+              <div class="card" style='background-image: url("{{ a.serv_img3.url }}");' data-aos="fade-up" data-aos-delay="100">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">شیر آلات صنعتی</a></h5>
+                  <p class="card-text">{{ serv_description }}</p>
+                  <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-stretch" >
+              <div class="card" style='background-image: url("{{ a.serv_img4.url }}");' data-aos="fade-up" data-aos-delay="100">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">نمیدونم</a></h5>
+                  <p class="card-text">{{ serv_description }}</p>
+                  <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
                 </div>
               </div>
             </div>
@@ -198,7 +233,7 @@
           </div>
 
         </div>
-      </section> -->
+      </section> 
     <!-- End More Services Section -->
     <!-- ======= Portfolio Section ======= -->
     <!-- <section id="portfolio" class="portfolio">
@@ -230,7 +265,7 @@
                 <h4>محصولات پنوماتیکی </h4>
                 <div class="portfolio-links">
                   <a href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="{% url 'listings' %}" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -243,7 +278,7 @@
                 <h4>محصولات هیدرولیکی</h4>
                 <div class="portfolio-links">
                   <a href="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="{% url 'listings' %}" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -256,7 +291,7 @@
                 <h4>اسمش رو نمیدونیم</h4>
                 <div class="portfolio-links">
                   <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="{% url 'listings' %}" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -268,7 +303,7 @@
                 <h4>شیرآلات صنعتی </h4>
                 <div class="portfolio-links">
                   <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="{% url 'listings' %}" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -289,11 +324,14 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>گواهی ها </h2>
-          <p align="justify">Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
         </div>
 
         <div class="row">
+
           <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <p align="justify">
+              کاربران حرفه ای و توانمند صنایع فولاد، نفت و پالایش کشورمان برای داشتن بهترین کیفیت و عملکرد، در سخت ترین شرایط کاری به آتی اندیشان بصیر اعتماد کرده اند.
+            </p>
             <div class="swiper-wrapper">
             {% for i in cer1 %}
               <div class="swiper-slide">
@@ -310,7 +348,10 @@
                   </div>
                 </div>
               </div>
+
+
               {% endfor %}
+
               <!-- End testimonial item -->
   
 
@@ -325,7 +366,7 @@
           <h2>Frequently Asked Questions</h2>
         </div>
 
-        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="row faq-item d-flex align-items-stretch"  data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-5">
             <i class="ri-question-line"></i>
             <h4>Non consectetur a erat nam at lectus urna duis?</h4>
@@ -338,7 +379,7 @@
         </div>
         <!-- End F.A.Q Item-->
 
-        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+        <div class="row faq-item d-flex align-items-stretch"  data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-5">
             <i class="ri-question-line"></i>
             <h4>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h4>
@@ -350,7 +391,7 @@
           </div>
         </div><!-- End F.A.Q Item-->
 
-        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+        <div class="row faq-item d-flex align-items-stretch"  data-aos="fade-up" data-aos-delay="300">
           <div class="col-lg-5">
             <i class="ri-question-line"></i>
             <h4>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?</h4>
@@ -362,7 +403,7 @@
           </div>
         </div><!-- End F.A.Q Item-->
 
-        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+        <div class="row faq-item d-flex align-items-stretch"  data-aos="fade-up" data-aos-delay="400">
           <div class="col-lg-5">
             <i class="ri-question-line"></i>
             <h4>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h4>
@@ -374,7 +415,7 @@
           </div>
         </div><!-- End F.A.Q Item-->
 
-        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+        <div class="row faq-item d-flex align-items-stretch"  data-aos="fade-up" data-aos-delay="500">
           <div class="col-lg-5">
             <i class="ri-question-line"></i>
             <h4>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h4>
@@ -402,7 +443,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="contact-about">
               <h3>آتی اندیشان بصیر</h3>
-              <p align="justify">یک سری توضیحات اینجا اضافه می شود</p>
+              <!-- <p align="justify">یک سری توضیحات اینجا اضافه می شود</p> -->
               <div class="social-links">
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -416,16 +457,20 @@
             <div class="info">
               <div>
                 <i class="ri-map-pin-line"></i>
-                <p align="justify">A108 Adam Street<br>New York, NY 535022</p>
+                <p align="justify">اصفهان<br>شهرک علمی و تحقیقاتی اصفهان- مجتمع تجاری سازی نوآوری- واحد  4 و 6</p>
               </div>
               <div>
                 <i class="ri-mail-send-line"></i>
-                <p align="justify">info@example.com</p>
+                <p align="justify">atiandishan.engineering@gmail.com</p>
               </div>
 
               <div>
                 <i class="ri-phone-line"></i>
-                <p align="justify">+1 5589 55488 55s</p>
+                <p align="justify">تلفن: 33932401- 031 </p>
+              </div>
+              <div>
+                <i class="ri-phone-line"></i>
+                <p align="justify">فکس : 33932402-031  </p>
               </div>
 
             </div>
@@ -434,23 +479,23 @@
           <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                <input type="text" name="name" class="form-control" id="name" placeholder="نام شما" required>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="ایمیل" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="موضوع" required>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="پیام" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
+                <div class="loading">بارگزاری</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">ارسال پیام </button></div>
             </form>
           </div>
 

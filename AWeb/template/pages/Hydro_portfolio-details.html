@@ -1,0 +1,123 @@
+{% extends '../base.html' %}
+{% block content %}
+{% load static %}
+
+  <main id="main">
+  {% if metering_valve_listing %}    
+    <!-- ======= Breadcrumbs ======= -->
+      <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+          <section id="portfolio-details" class="portfolio-details">
+              <div class="row gy-4">
+
+                <div class="col-lg-8">
+                  <div class="portfolio-details-slider swiper">
+                    <div class="swiper-wrapper align-items-center">
+      
+                      <div class="swiper-slide">
+                        <img src="{{  metering_valve_listing.part_image_main.url }}" alt="">
+                      </div>
+      
+                      <div class="swiper-slide">
+                        <img src="{{ metering_valve_listing.part_image_a.url }}" alt="">
+                      </div>
+      
+                      <div class="swiper-slide">
+                        <img src="{{ metering_valve_listing.part_image_b.url }}" alt="">
+                      </div>
+      
+                      <div class="swiper-slide">
+                        <img src="{{ metering_valve_listing.part_image_c.url }}" alt="">
+                      </div>
+      
+                      <div class="swiper-slide">
+                        <img src="{{ metering_valve_listing.part_image_d.url }}" alt="">
+                      </div>
+      
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="portfolio-info">
+                    <h3>اطلاعات محصول {{metering_valve_listing.part_name}}</h3>
+                    <ul>
+                      <li><strong>مشتری</strong>: {{metering_valve_listing.part_customer}}</li>
+                      <li><strong>کاتالوگ محصول</strong>: <a href="{{ metering_valve_listing.part_catalog.url }}" download="کاتالوگ">اینجا کلیک کنید</a></li>
+                    </ul>
+                  </div>
+                  <div class="portfolio-description">
+                    <h2>{{metering_valve_listing.part_name}}</h2>
+                    <p align="justify">
+                      {{metering_valve_listing.part_exact_discription}}
+                    </p>
+                </div>
+
+              </div>
+              </div>
+                <section id="portfolio" class="portfolio">
+                  <div class="container">
+            
+                    <div class="section-title" data-aos="fade-up">
+                      <h2> محصولات</h2>
+                      <p align="justify">
+                        {{metering_valve_listing.general_part_discription}}
+                      </p>                    </div>
+            
+                    <div class="row" data-aos="fade-up" data-aos-delay="200">
+                      <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+                          <!-- <li data-filter="*" class="filter-active">همه محصولات</li> -->
+                          <li data-filter=".filter-technical">مشخصات فنی</li>
+                          <!-- <li data-filter=".filter-unknown">اسمش رو نمیدونیم</li> -->
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+                      <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
+                        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                          <div class="col-lg-5">
+                            <i class="ri-question-line"></i>
+                            <h4>Non consectetur a erat nam at lectus urna duis?</h4>
+                          </div>
+                          <div class="col-lg-7">
+                            <p>
+                              Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                          <div class="col-lg-5">
+                            <i class="ri-question-line"></i>
+                            <h4>Non consectetur a erat nam at lectus urna duis?</h4>
+                          </div>
+                          <div class="col-lg-7">
+                            <p>
+                              Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                          <div class="col-lg-5">
+                            <i class="ri-question-line"></i>
+                            <h4>Non consectetur a erat nam at lectus urna duis?</h4>
+                          </div>
+                          <div class="col-lg-7">
+                            <p>
+                              Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+          
+                   </div>
+                  </div>
+                </section>
+          </section>
+        </div>
+      </section>
+    <!-- End Breadcrumbs -->
+    {% endif %}
+  </main>
+<!-- End #main -->
+{% endblock %}

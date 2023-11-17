@@ -42,11 +42,13 @@ class Testimonials(models.Model):
 
 
 class services(models.Model):
-    serv_name = models.CharField(max_length=50,)
     #serv_description = models.TextField(max_length=1500)
-    serv_img = models.ImageField(upload_to='photos/%Y/%m/%d/',)
+    serv_img1 = models.ImageField(upload_to='photos/%Y/%m/%d/',)
+    serv_img2 = models.ImageField(upload_to='photos/%Y/%m/%d/',)
+    serv_img3 = models.ImageField(upload_to='photos/%Y/%m/%d/',)
+    serv_img4 = models.ImageField(upload_to='photos/%Y/%m/%d/',)
     def __str__(self):
-        return self.serv_name
+        return "عکس های خدمات"
     class Meta:
         verbose_name = 'خدمات'
         verbose_name_plural = 'خدمات'
