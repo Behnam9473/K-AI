@@ -113,18 +113,11 @@
               {{ a.about_long_description }}
             </p>
             {% endfor %}
-            <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-            </ul>
             <!-- <a href="#" class="btn-learn-more">بیشتر بخوانید</a> -->
           </div>
         </div>
-
       </div>
     </section><!-- End About Us Section -->
-
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
       <div class="container">
@@ -190,6 +183,8 @@
         <div class="container">
           <div class="section-title" data-aos="fade-up">
             <h2> خدمات و محصولات ما</h2>
+            <p>مهندسی در سطوح پیشرفته با تکیه بر تجربه و توانمندی حاصل از ساخت بیش از 180 محصول فناورانه در حوزه صنایع مادر کشور</p>
+            <p>محصولات تولیدی این شرکت دارای استانداردهای کارخانه ای سخت گیرانه تر از استانداردهای مرجع است</p>
           </div>
           <div class="row">
             {% for a in serv1 %}
@@ -339,7 +334,7 @@
                   <div class="testimonial-item">
                     <img src="{{ i.cert_img.url }}" class="testimonial-img" alt="">
                     <h3>{{ i.cert_name }}</h3>
-                    <h4>Ceo &amp; Founder</h4>
+                    <!-- <h4>Ceo &amp; Founder</h4> -->
                     <p align="justify">
                       <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                       {{ i.cert_description }}
@@ -428,8 +423,8 @@
         </div><!-- End F.A.Q Item-->
 
       </div>
-    </section><!-- End F.A.Q Section -->
-
+    </section>
+    <!-- End F.A.Q Section -->
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
@@ -504,10 +499,8 @@
       </div>
     </section><!-- End Contact Section -->
 
-  </main><!-- End #main -->
-
-
-
+  </main>
+  <!-- End #main -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 </body>
 {% endblock %}
