@@ -49,6 +49,11 @@ def penu_listing(request,listing_id):
      return render(request, 'pages/penu_portfolio-details.html', listing_context)
 
 
+def sooon(request):
+
+     return render(request, 'pages/soon.html', )
+
+
 
 
 # def penu_list(request,listing_id):

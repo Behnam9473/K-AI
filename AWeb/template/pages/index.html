@@ -3,8 +3,7 @@
 {% load static %}
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center ">
-
+  <div class="container">
     <section id="hero" class="d-flex align-items-center ">
 
       <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
@@ -47,9 +46,8 @@
       </div>
   
     </section>
-
-  </section><!-- End Hero -->
-
+  </div>
+  <!-- End Hero -->
   <main id="main">
 
     <!-- ======= Clients Section ======= -->
@@ -211,16 +209,16 @@
                 <div class="card-body">
                   <h5 class="card-title"><a href="">شیر آلات صنعتی</a></h5>
                   <p class="card-text">{{ serv_description }}</p>
-                  <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
+                  <div class="read-more"><a href="{% url 'soon' %}"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
                 </div>
               </div>
             </div>
             <div class="col-md-6 d-flex align-items-stretch" >
               <div class="card" style='background-image: url("{{ a.serv_img4.url }}");' data-aos="fade-up" data-aos-delay="100">
                 <div class="card-body">
-                  <h5 class="card-title"><a href="">نمیدونم</a></h5>
+                  <h5 class="card-title"><a href="">تجهیزات کلیدهای فشار قوی</a></h5>
                   <p class="card-text">{{ serv_description }}</p>
-                  <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
+                  <div class="read-more"><a href="{% url 'soon' %}"><i class="bi bi-arrow-right"></i> بیشتر بخوانید</a></div>
                 </div>
               </div>
             </div>
@@ -369,7 +367,7 @@
           </div>
           <div class="col-lg-7">
             <p align="justify">
-              Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+              در حال حاضر، سبد محصولات شرکت در حوزه تقسیم‌کننده‌های گریس و روغن در حجم‌های 3 سی‌سی و 12 سی‌سی کامل است. شرکت همچنین در حال تکمیل سبد محصولات خود برای ظرفیت‌های بالاتر است.
             </p>
           </div>
         </div>
@@ -378,23 +376,22 @@
         <div class="row faq-item d-flex align-items-stretch"  data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-5">
             <i class="ri-question-line"></i>
-            <h4>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h4>
+            <h4>آیا به‌صورت سفارشی‌ساز هم فعالیت دارید؟</h4>
           </div>
           <div class="col-lg-7">
             <p align="justify">
-              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-            </p>
+              بله، شرکت در حوزه هیدرولیکی و پنوماتیکی با تکنولوژی خاص، در صورت تیراژ مناسب، فعالیت سفارشی‌سازی را انجام می‌دهد.            </p>
           </div>
         </div><!-- End F.A.Q Item-->
 
         <div class="row faq-item d-flex align-items-stretch"  data-aos="fade-up" data-aos-delay="300">
           <div class="col-lg-5">
             <i class="ri-question-line"></i>
-            <h4>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?</h4>
+            <h4>آیا بکس بادی سایزهای دیگر هم تولید می‌کنید؟</h4>
           </div>
           <div class="col-lg-7">
             <p align="justify">
-              Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus.
+              تولید بکس بادی سایز 1.1/2 در برنامه تحقیق و توسعه شرکت قرار دارد.
             </p>
           </div>
         </div><!-- End F.A.Q Item-->
@@ -402,11 +399,11 @@
         <div class="row faq-item d-flex align-items-stretch"  data-aos="fade-up" data-aos-delay="400">
           <div class="col-lg-5">
             <i class="ri-question-line"></i>
-            <h4>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h4>
+            <h4>آیا پمپ گریس هم تولید می‌کنید؟</h4>
           </div>
           <div class="col-lg-7">
             <p align="justify">
-              Aperiam itaque sit optio et deleniti eos nihil quidem cumque. Voluptas dolorum accusantium sunt sit enim. Provident consequuntur quam aut reiciendis qui rerum dolorem sit odio. Repellat assumenda soluta sunt pariatur error doloribus fuga.
+              تولید پمپ گریس در فرآیند تحقیق و توسعه شرکت قرار دارد و به‌زودی به سبد محصولات اضافه خواهد شد.
             </p>
           </div>
         </div><!-- End F.A.Q Item-->
@@ -414,14 +411,31 @@
         <div class="row faq-item d-flex align-items-stretch"  data-aos="fade-up" data-aos-delay="500">
           <div class="col-lg-5">
             <i class="ri-question-line"></i>
-            <h4>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h4>
+            <h4>استانداردهای تولید محصول شما کدامند؟</h4>
           </div>
           <div class="col-lg-7">
             <p align="justify">
-              Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+              شرکت از استانداردهای مرجع ISO، DIN و ASTM تبعیت می‌کند و به‌صورت داخلی سطح بالاتری از موارد مذکور را ارائه می‌دهد.
             </p>
           </div>
-        </div><!-- End F.A.Q Item-->
+        </div>
+        <!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch"  data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-5">
+            <i class="ri-question-line"></i>
+            <h4>دستگاه های موجود در شرکت کدامند؟</h4>
+          </div>
+          <div class="col-lg-7">
+            <p align="justify">
+                 /CNC 5-axis
+                 /CNC 3-axis/
+                 CNC honing/
+                 Hydraulic binder/
+            </p>
+          </div>
+        </div>
+        <!-- End F.A.Q Item-->
 
       </div>
     </section>
@@ -431,7 +445,7 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Contact Us</h2>
+          <h2> تماس با ما</h2>
         </div>
 
         <div class="row">
@@ -440,12 +454,12 @@
             <div class="contact-about">
               <h3>آتی اندیشان بصیر</h3>
               <!-- <p align="justify">یک سری توضیحات اینجا اضافه می شود</p> -->
-              <div class="social-links">
+              <!-- <div class="social-links">
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
                 <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -466,7 +480,7 @@
               </div>
               <div>
                 <i class="ri-phone-line"></i>
-                <p align="justify">فکس : 33932402-031  </p>
+                <p align="justify">فکس: 33932402-031 </p>
               </div>
 
             </div>
