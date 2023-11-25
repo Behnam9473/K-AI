@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ibv4(tg($c%o())b^r=_int8aii+s84-+ckh&uk5wqiwau$5zv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.atiandishan-co.com", "atiandishan-co.com"] 
 
 
 # Application definition
@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'Aweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'atiaindishan_web',
-        'USER': 'SPQ',
-        'PASSWORD':'87534',
-        'HOST':'localhost',
+        'NAME':'atiandisvuv_db',
+        'USER': 'postgres',
+        'PASSWORD':'biG13qRN5hyfE#hFeTZf',
+        'HOST':'atiandishan-hft-service',
     }
 }
 

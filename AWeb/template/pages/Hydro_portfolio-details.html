@@ -21,19 +21,7 @@
                       <div class="swiper-slide">
                         <img src="{{ metering_valve_listing.part_image_a.url }}" alt="">
                       </div>
-      
-                      <div class="swiper-slide">
-                        <img src="{{ metering_valve_listing.part_image_b.url }}" alt="">
-                      </div>
-      
-                      <div class="swiper-slide">
-                        <img src="{{ metering_valve_listing.part_image_c.url }}" alt="">
-                      </div>
-      
-                      <div class="swiper-slide">
-                        <img src="{{ metering_valve_listing.part_image_d.url }}" alt="">
-                      </div>
-      
+
                     </div>
                     <div class="swiper-pagination"></div>
                   </div>
@@ -55,42 +43,171 @@
 
               </div>
               </div>
-                <section id="portfolio" class="portfolio">
-                  <div class="container">
-            
-                    <div class="section-title" data-aos="fade-up">
-                      <h2> محصولات</h2>
-                      <p align="justify">
-                        {{metering_valve_listing.general_part_discription}}
-                      </p>                    </div>
-            
-                    <div class="row" data-aos="fade-up" data-aos-delay="200">
-                      <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                          <!-- <li data-filter="*" class="filter-active">همه محصولات</li> -->
-                          <li data-filter=".filter-technical">مشخصات فنی</li>
-                          <!-- <li data-filter=".filter-unknown">اسمش رو نمیدونیم</li> -->
-                        </ul>
-                      </div>
+              <section id="portfolio" class="portfolio">
+                <div class="container">
+          
+                  <div class="section-title" data-aos="fade-up">
+                    <h2> محصولات</h2>
+                    <p align="justify">
+                      {{metering_valve_listing.general_part_discription}}
+                    </p>                    
+                  </div>
+          
+                  <div class="row" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                      <ul id="portfolio-flters">
+                        <!-- <li data-filter="*" class="filter-active">همه محصولات</li> -->
+                        <li data-filter=".filter-technical">مشخصات فنی</li>
+                        <!-- <li data-filter=".filter-unknown">اسمش رو نمیدونیم</li> -->
+                      </ul>
                     </div>
-                    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
-                      <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
-                        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                          <div class="col-lg-5">
-                            <i class="ri-question-line"></i>
-                            <h4>Non consectetur a erat nam at lectus urna duis?</h4>
-                          </div>
-                          <div class="col-lg-7">
-                            <p>
-                              Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                            </p>
-                          </div>
+                  </div>
+
+                  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+
+                    <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
+                      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-8 ">
+                          <h4 class="text-center">Temperature</h4>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>
+                            {{metering_valve_listing.part_temp}}
+                          </p>
                         </div>
                       </div>
-          
-                   </div>
+                    </div>
                   </div>
-                </section>
+
+                  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
+                      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-8 ">
+                          <h4 class="text-center">Max.perssure(bar)</h4>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>
+                            {{metering_valve_listing.part_perssure}}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
+                      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-8 ">
+                          <h4 class="text-center">opertating cycles</h4>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>
+                            {{metering_valve_listing.part_oprating_cycles}}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
+                      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-8 ">
+                          <h4 class="text-center">Min.viscosity</h4>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>
+                            {{metering_valve_listing.part_min_viscosity}}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
+                      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-8 ">
+                          <h4 class="text-center">Greases, max</h4>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>
+                            {{metering_valve_listing.part_greaes_max}}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
+                      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-8 ">
+                          <h4 class="text-center">connection oulet</h4>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>
+                            {{metering_valve_listing.part_oulet_connection}}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
+                      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-8 ">
+                          <h4 class="text-center">connection inlet</h4>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>
+                            {{metering_valve_listing.part_inlet_connection}}  
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
+                      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-8 ">
+                          <h4 class="text-center">Outlet.NO </h4>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>
+                            {{metering_valve_listing.part_outlet_no}}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-lg-12 col-md-6 portfolio-item align-items-stretch filter-technical">
+                      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-8 ">
+                          <h4 class="text-center">MAX Volume</h4>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>
+                            {{metering_valve_listing.part_max_volume}}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </div>
+                </div>
+              </section>
           </section>
         </div>
       </section>
