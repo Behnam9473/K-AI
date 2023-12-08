@@ -1,9 +1,25 @@
-#!/usr/bin/env python
-# coding: utf-8
+### croped images
+import os
+import cv2
+import matplotlib.pyplot as plt
 
-# In[ ]:
+path = '/content/drive/MyDrive/Data/AR03-101-01'
+for img in os.listdir(path):
+  if img.endswith('.png'):
+    image = os.path.join(path,img)
+    image_read = cv2.imread(image)
+    a = cv2.cvtColor(image_read, cv2.COLOR_BGR2RGB)
+    x, y, w, h = 500,400,1200,1200
+    crop = a[y:y+h, x:x+w]
+
+  plt.imshow(crop)
+  plt.show()
+
+crop.shape
 
 
+
+### Object Detection
 import cv2
 face_classifier = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
