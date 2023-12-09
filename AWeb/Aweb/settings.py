@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ibv4(tg($c%o())b^r=_int8aii+s84-+ckh&uk5wqiwau$5zv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["www.atiandishan-co.com", "atiandishan-co.com"] 
+ALLOWED_HOSTS = ["www.atiandishan-co.com", "atiandishan-co.com","127.0.0.1", "127.0.0.1:8001"] 
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'atiandishan.apps.AtiandishanConfig',
     'listings.apps.ListingsConfig',
+    'news.apps.NewsConfig',
 ]
 
 MIDDLEWARE = [
@@ -77,15 +78,28 @@ WSGI_APPLICATION = 'Aweb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME':'atiandisvuv_db',
+#         'USER': 'postgres',
+#         'PASSWORD':'biG13qRN5hyfE#hFeTZf',
+#         'HOST':'atiandishan-hft-service',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'atiandisvuv_db',
-        'USER': 'postgres',
-        'PASSWORD':'biG13qRN5hyfE#hFeTZf',
-        'HOST':'atiandishan-hft-service',
+        'NAME':'postgres',
+        'USER': 'IPCRM',
+        'PASSWORD':'87534',
+        'HOST':'localhost',
     }
 }
+
+
+
 
 
 # Password validation

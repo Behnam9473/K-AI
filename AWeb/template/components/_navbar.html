@@ -11,25 +11,24 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="{% url 'index' %}">خانه</a></li>
-          <li><a class="nav-link scrollto" href="#about">درباره ما</a></li>
-          <li><a class="nav-link scrollto" href="#more-services">خدمات </a></li>
+          <li class="{% if page == 'index#hero' %}  active {% endif %}"><a class="nav-link scrollto" href="{% url 'index' %}#hero">خانه</a></li>
+          <li class="{% if page == 'index#about' %}  active {% endif %}"><a class="nav-link scrollto " href="{% url 'index' %}#about">درباره ما</a></li>
+          <li class="{% if page == 'index#more-services' %}  active {% endif %}"><a class="nav-link scrollto " href="{% url 'index' %}#more-services">خدمات </a></li>
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               محصولات
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{% url 'penu_listings' %}">پنوماتیکی</a></li>
+              <li><a class="dropdown-item " href="{% url 'penu_listings' %}">پنوماتیکی</a></li>
               <li><a class="dropdown-item" href="{% url 'hydro_listings' %}"> هیدرولیکی</a></li>
-              <li><a class="dropdown-item" href="#"> شیرآلات صنعتی</a></li>
-              <li><a class="dropdown-item" href="#"> نمیدونم </a></li>
+              <li><a class="dropdown-item " href="#"> شیرآلات صنعتی</a></li>
+              <li><a class="dropdown-item" href="#"> کلیدهای فشار بالا </a></li>
 
             </ul>
           </li>
+          <li class="{% if page == 'index#contactus' %}  active {% endif %}"><a class="getstarted nav-link scrollto " href="{% url 'index' %}#contactus"> تماس با </a></li>
 
-
-          <li><a class="nav-link scrollto" href="#contact">تماس با ما</a></li>
-          <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
