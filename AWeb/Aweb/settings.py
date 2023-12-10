@@ -78,25 +78,25 @@ WSGI_APPLICATION = 'Aweb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME':'atiandisvuv_db',
-#         'USER': 'postgres',
-#         'PASSWORD':'biG13qRN5hyfE#hFeTZf',
-#         'HOST':'atiandishan-hft-service',
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'postgres',
-        'USER': 'IPCRM',
-        'PASSWORD':'87534',
-        'HOST':'localhost',
+        'NAME':'atiandisvuv_db',
+        'USER': 'postgres',
+        'PASSWORD':'biG13qRN5hyfE#hFeTZf',
+        'HOST':'atiandishan-hft-service',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME':'postgres',
+#         'USER': 'IPCRM',
+#         'PASSWORD':'87534',
+#         'HOST':'localhost',
+#     }
+# }
 
 
 
@@ -148,3 +148,4 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CSRF_TRUSTED_ORIGINS =['https://atiandishan-co.com','https://wwww.atiandishan-co.co']

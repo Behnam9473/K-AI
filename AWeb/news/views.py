@@ -10,3 +10,10 @@ def news(request):
 
     }
     return render(request,'pages/news.html',data)
+
+def new(request, news_id):
+     new_listing = get_object_or_404(News, pk=news_id)
+     listing_context = {
+        "new": new_listing,
+     }
+     return render(request, 'pages/news_portfolio-details.html', listing_context)
