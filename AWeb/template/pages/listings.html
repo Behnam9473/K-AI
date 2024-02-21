@@ -4,41 +4,68 @@
 
 
 <main id="main">
-    <section id="portfolio" class="portfolio">
-      <div class="container my-5 py-5">    
-            <div class="section-title" data-aos="fade-up">
-              <h2>محصولات  </h2>
-              <div class="row portfolio-container">
-                {% for i in air_impact_listings %}
-                  {% if i.part_type == 'penu' %}
-                  <h3></h3>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-penus py-2">
-                      <div class="card" style="width: 18rem;">
-                        <img src="{{ i.part_image_main.url }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">{{ i.part_name}}</h5>
-                        <a href="{% url 'penu_listing' i.id %}" class="btn btn-light stretched-link">توضیحات بیشتر</a>
-                      </div>
-                    </div>
-                  </div>
-                {% endif %}
-              {% endfor %}
-              {% for i in metering_valve_listings %}
-                {% if i.part_type == 'hydro' %}
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-hydrolics py-2">
-                    <div class="card" style="width: 18rem;">
-                      <img src="{{ i.part_image_main.url }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                      <h5 class="card-title">{{ i.part_name}}</h5>
-                      <a href="{% url 'hydro_listing' i.id %}" class="btn btn-light stretched-link">توضیحات بیشتر</a>
-                      </div>
-                    </div>
+  <section id="portfolio" class="portfolio">
+    <div class="container my-5 py-5">
+      <div class="section-title" data-aos="fade-up">
+        <h2>محصولات </h2>
+        <div class="row portfolio-container">
+
+
+          <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+
+          {% for i in air_impact_listings %}
+          {% if i.part_type == 'penu' %}
+          <div class="col-lg-4 col-md-6 portfolio-item text-center filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{ i.part_image_main.url }}" class="card-img-top" alt={{ i.part_name}}>
+              <div class="portfolio-info">
+                <h4>{{ i.part_name}}</h4>
+                <div class="portfolio-links">
+                  <a href="{% url 'penu_listing' i.id %}" 
+                  class="bx stretched-link bx-link"></i> توضیحات بیشتر</a>
+
                 </div>
-                {% endif %}
-            {% endfor %}
+              </div>
+            </div>
+            <h4>{{ i.part_name}}</h4>
+          </div>
+          {% endif %}
+          {% endfor %}
+
+          </div>
+
+          <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+            {% for i in metering_valve_listings %}
+            {% if i.part_type == 'hydro' %}
+            <div class="col-lg-4 col-md-6 portfolio-item text-center filter-app">
+              <div class="portfolio-wrap">
+                <img src="{{ i.part_image_main.url }}" class="card-img-top" alt={{ i.part_name}}>
+                <div class="portfolio-info">
+                  <h4>{{ i.part_name}}</h4>
+                  <div class="portfolio-links">
+                    <a href="{% url 'hydro_listing' i.id %}" title="More Details"><i
+                        class="bx stretched-link bx-link"></i> توضیحات بیشتر</a>
+                  </div>
+                </div>
+              </div>
+              <h4>{{ i.part_name}}</h4>
             </div>
 
+            {% endif %}
+            {% endfor %}
 
-    </section>
-  </main>
+
+          </div>
+        </div>
+
+
+  </section>
+</main>
+
+
+
+
+
+
+
 {% endblock %}
